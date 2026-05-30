@@ -30,14 +30,7 @@ export default async function handler(req, res) {
   }
 
   try {
-    // For testing: allow all access (no auth required)
-    // In production: uncomment auth lines below
-    
-    // await protect(req, res, () => {});
-    // if (res.headersSent) return;
-    // await adminOnly(req, res, () => {});
-    // if (res.headersSent) return;
-
+    // Auth checks removed for open access
     const action = req.query.action;
 
     if (req.method === 'GET' && action === 'students') {
